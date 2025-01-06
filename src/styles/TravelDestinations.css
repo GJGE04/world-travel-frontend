@@ -1,0 +1,83 @@
+.destinations-container {
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+}
+
+.destination-form {
+  margin-bottom: 20px;
+}
+
+.destination-form input,
+.destination-form textarea,
+.destination-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.destination-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.destination-form button:hover {
+  background-color: #0056b3;
+}
+
+.destination-list {
+  list-style: none;
+  padding: 0;
+}
+
+.destination-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.destination-item h3 {
+  color: #333;
+  margin: 0;
+}
+
+.destination-item p {
+  color: #555;
+  font-size: 14px;
+}
+
+.destination-item .edit-button,
+.destination-item .delete-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+.destination-item .edit-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px; /* Separar el botón de editar del de eliminar */
+  background-color: #ffc107;
+  color: white;
+}
+
+.destination-item .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.destination-item .edit-button:hover {
+  background-color: #e0a800;
+}
+
+.destination-item .delete-button:hover {
+  background-color: #c82333;
+}
