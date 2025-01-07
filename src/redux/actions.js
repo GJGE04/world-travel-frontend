@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 // Acción para obtener los destinos
 export const fetchDestinations = () => async (dispatch) => {
   try {
-    const response = await axios.get('http://localhost:5000/destinations');
+    const response = await axios.get(`${apiUrl}/destinations`);
 	console.log('Destinations fetched:', response.data);
     dispatch({ type: 'SET_DESTINATIONS', payload: response.data });
   } catch (error) {
@@ -12,7 +14,7 @@ export const fetchDestinations = () => async (dispatch) => {
 };
 
 export const createDestination = (name, country, description) => async (dispatch) => {
-  const response = await axios.post('http://localhost:5000/destination', {
+  const response = await axios.post(`${apiUrl}/destination`, {
     name,
     country,
     description,
@@ -22,12 +24,12 @@ export const createDestination = (name, country, description) => async (dispatch
 };
 
 export const deleteDestination = (id) => async (dispatch) => {
-  await axios.delete(`http://localhost:5000/destination/${id}`);
+  await axios.delete(`${apiUrl}/destination/${id}`);
   dispatch({ type: 'DELETE_DESTINATION', payload: id });
 };
 
 export const updateDestination = (id, name, country, description) => async (dispatch) => {
-  await axios.put(`http://localhost:5000/destination/${id}`, {
+  await axios.put(`${apiUrl}/destination/${id}`, {
     name,
     country,
     description,
